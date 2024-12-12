@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>F-IT | Create a Quick & Simple Short URL 👋</title>
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T69D60030Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-T69D60030Q');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PXPR82BD');</script>
+    <!-- End Google Tag Manager -->
+    <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+    <script type="text/javascript">
+        if (!wcs_add) var wcs_add = {};
+        wcs_add["wa"] = "1f2a4b227414a90";
+        if (window.wcs) {
+            wcs_do();
+        }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <meta name="description"
+          content="Introducing f-it.kr, a site that swiftly and easily shortens your links. Utilizing cutting-edge technology, we offer remarkable performance along with a versatile API service tailored to your needs. Features include the use of custom domains, daily statistics, and the option to install the program on a separate server. Begin your URL shortening experience anew with f-it.kr.">
+    <meta name="keywords" content="URL, Short URL, URL 축소, API, F-IT">
+    <meta name="author" content="F-IT">
+    <meta property="og:title" content="F-IT">
+    <meta property="og:description"
+          content="Introducing f-it.kr, a site that swiftly and easily shortens your links. Utilizing cutting-edge technology, we offer remarkable performance along with a versatile API service tailored to your needs. Features include the use of custom domains, daily statistics, and the option to install the program on a separate server. Begin your URL shortening experience anew with f-it.kr.">
+    <meta property="og:image" content="/img/og-img.png">
+    <meta property="og:url" content="https://f-it.kr">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="F-IT">
+    <meta name="naver-site-verification" content="592039c9a1ffed6d9cdd6f0fd41d740c8066ab9f"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .button-hover-effect:hover {
+            background-color: #d1d5db;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXPR82BD"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="container mx-auto px-4">
+    <div class="flex flex-col items-center justify-center min-h-screen">
+        <h1 class="text-5xl font-black mb-8 uppercase">F-IT.</h1>
+        <p class="text-lg mb-4">
+            Create a Quick & Simple <strong class="text-[#151cac]">Short URL</strong> 👋
+        </p>
+        <input id="long-url-input"
+               class="flex h-10 border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-1/4 max-w-md rounded-full mb-8 focus:w-full transition-all duration-500 ease-in-out"
+               placeholder="Please enter your Long URL 🙏">
+        <div class="flex space-x-2 mb-6 mt-[-10px]">
+            <a class="flex items-center space-x-1 bg-gray-200 rounded-full p-2 button-hover-effect"
+               href="mailto:lee@lou2.kr">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="w-4 h-4">
+                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <span class="text-xs">Contact</span>
+            </a>
+            <a href='https://ko-fi.com/B0B5S3OVS' target='_blank'>
+                <img height='36' style='border:0px;height:36px;'
+                     src='https://storage.ko-fi.com/cdn/kofi2.png?v=3'
+                     border='0'
+                     alt='Buy Me a Coffee at ko-fi.com'/>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 컨테이너 -->
+<div id="modal-container" class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center">
+    <div class="bg-white p-4 rounded-lg shadow-lg w-96 flex items-center">
+        <input id="modal-input" class="border p-2 rounded flex-grow" readonly>
+        <button id="copy-button" class="ml-2 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="w-4 h-4">
+                <rect width="15" height="15" x="8" y="8" rx="2" ry="2"></rect>
+                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+            </svg>
+        </button>
+    </div>
+</div>
+
+<script>
+    const longUrlInput = document.getElementById('long-url-input');
+    const modalContainer = document.getElementById('modal-container');
+    const modalInput = document.getElementById('modal-input');
+
+    longUrlInput.addEventListener('keydown', async function (event) {
+        if (event.key === 'Enter' || event.key === 'NumpadEnter') {
+            event.preventDefault();
+            const urlPattern = /^(https?:\/\/)?(www\.)?([a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5})(:[0-9]{1,5})?(\/.*)?(\?.*)?$/i;
+            if (!urlPattern.test(longUrlInput.value)) {
+                alert('Sorry, the URL is invalid. Please check the URL and try again.');
+                return;
+            }
+            try {
+                // 무료 버전 토큰
+                const response = await fetch('/v1/urls', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({url: longUrlInput.value})
+                });
+
+                if (!response.ok) {
+                    const data = await response.text();
+                    throw new Error('서버에서 오류가 발생했습니다. 오류 메시지: ' + data);
+                }
+
+                const data = await response.text();
+                modalInput.value = 'https://f-it.kr/' + data;
+                modalContainer.classList.remove('hidden');
+            } catch (error) {
+                alert(error.message);
+            }
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        adjustInputWidth();
+        window.addEventListener('resize', adjustInputWidth);
+    });
+
+    function adjustInputWidth() {
+        if (window.innerWidth < 640) {
+            longUrlInput.classList.remove('w-1/4');
+            longUrlInput.classList.add('w-1/2');
+        } else {
+            longUrlInput.classList.remove('w-1/2');
+            longUrlInput.classList.add('w-1/4');
+        }
+    }
+
+    longUrlInput.addEventListener('input', function () {
+        if (this.value.length > 0) {
+            this.classList.remove('w-1/4', 'w-1/2');
+            this.classList.add('w-full');
+        }
+    });
+
+    longUrlInput.addEventListener('blur', function () {
+        if (this.value.length === 0) {
+            this.classList.remove('w-full');
+            if (window.innerWidth < 640) {
+                this.classList.add('w-1/2');
+            } else {
+                this.classList.add('w-1/4');
+            }
+        }
+    });
+
+    document.getElementById('copy-button').addEventListener('click', function () {
+        const modalInput = document.getElementById('modal-input');
+        modalInput.select();
+        document.execCommand('copy');
+    });
+
+    // 모달 외부 클릭 시 모달 닫기
+    window.addEventListener('click', function (event) {
+        let modalContainer = document.getElementById('modal-container');
+        if (event.target === modalContainer) {
+            modalContainer.classList.add('hidden');
+        }
+    });
+</script>
+</body>
+</html>
